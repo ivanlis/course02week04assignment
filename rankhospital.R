@@ -18,7 +18,7 @@ rankhospital <- function(state, outcome, num = "best") {
     stop("invalid outcome")
   
   ## Return hospital name in that state with
-  ## lowest 30-day death rate    
+  ## the given rank 30-day death rate    
   # coerce the criterion column to numeric
   suppressWarnings(dataSet[, criterionColumn] <- as.numeric(dataSet[, criterionColumn]))
   # sort by the criterion, then by the hospital name (tie case)
